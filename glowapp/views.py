@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import HttpResponse, render
+from django.template import loader
 
-# Create your views here.
+
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the index.")
+
+
+def map(request):
+    return render(request, 'glowapp/map.html')
